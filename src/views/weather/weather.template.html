@@ -1,0 +1,35 @@
+<div class="container-fluid weather-container">
+  <h2 class="header">5 days forecast in {{ vm.location.city }}</h2>
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-1 col-sm-offset-9 col-md-offset-9 col-lg-offset-10">
+      <div class="temperature-switch pull-right" ng-click="vm.switchTemperatureUnit()">
+        <input type="checkbox" ng-model="vm.unit" ng-value="C" class="{{ vm.unit === 'C' ? 'checked' : '' }}">
+        <span class="slider round"></span>
+        <span class="temperature-unit metric">°C</span>
+        <span class="temperature-unit imperial">°F</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <img />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-md-3 col-lg-2 col-sm-offset-7 col-md-offset-8 col-lg-offset-9">
+      <div class="search-location-container">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-autocomplete ng-model="vm.city" options="vm.autoCompleteOptions" placeholder="Search for city">
+          <span class="input-group-btn">
+          <button class="btn btn-default btn-primary" type="button">Search</button>
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2 col-md-2 col-lg-2" ng-repeat="date in vm.weathers" ng-class="{'col-sm-offset-1 col-md-offset-1 col-lg-offset-1' : $first}">
+      <weather-of-date ng-model="date" display-unit="vm.displayUnit"></weather-of-date>
+    </div>
+  </div>
+</div>

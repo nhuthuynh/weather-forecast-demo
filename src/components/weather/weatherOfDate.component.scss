@@ -1,0 +1,80 @@
+@import '../bootstrap/bootstrap.component';
+
+  .date-forecast-container {
+
+    background-image: linear-gradient(to right, $date-forecast-container-bg-color-to, $date-forecast-container-bg-color-from);
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    .weather-day {
+      display: inline-block;
+      width: 85px;
+    }
+
+    .weather-temp-container {
+      display: inline-block;
+    }
+
+    .weather-font {
+      font-weight: bold;
+    }
+
+    .weather-brief-desc {
+      text-transform: capitalize;
+    }
+
+    .weather-icon {
+      display: inline-block;
+      margin: 0 10px;
+      width: 70px;
+    }
+
+    .weather-date {
+      display: none;
+
+      @media (orientation: landscape) {
+        display: inline-block;
+        margin: 0 10px;
+        width: 100px;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        position: absolute;
+        bottom: 10px;
+        margin: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $screen-sm-min) {
+      background-image: linear-gradient($date-forecast-container-bg-color-from, $date-forecast-container-bg-color-to);
+      padding: 10px 10px 90px 10px;
+      position: relative;
+      text-align: center;
+      min-height: 375px;
+      margin-bottom: 20px;
+
+      .weather-img {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .weather-brief-desc {
+        font-size: 14px;
+      }
+
+      .weather-font {
+        display: inline-block;
+        font-size: 30px;
+      }
+
+      .weather-day {
+        bottom: 45px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }

@@ -1,0 +1,92 @@
+@import '../../components/bootstrap/bootstrap.component';
+
+.weather-container {
+  .header {
+    background-color: #fff;
+    color: $color-header;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .search-location-container {
+    margin: 0 0 10px 0;
+  }
+
+  .temperature-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 10px;
+
+    /* Hide default HTML checkbox */
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &.checked + .slider {
+
+        &:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+      }
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+
+      &:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #337ab7;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+
+      &.round {
+        border-radius: 5px;
+        &:before {
+          border-radius: 10%;
+        }
+      }
+    }
+
+    .temperature-unit {
+      color: #fff;
+      position: absolute;
+      height: 26px;
+      width: 26px;
+      right: 4px;
+      bottom: 2px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &.imperial {
+        left: auto;
+        left: 4px;
+      }
+    }
+  }
+}

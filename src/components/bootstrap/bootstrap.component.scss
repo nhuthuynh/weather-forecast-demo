@@ -1,0 +1,14 @@
+//@import "/node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+/*
+  GENERAL STYLE
+*/
+$color-primary: #fff;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+
+/*
+  WEATHER FORECAST STYLE
+*/
+$color-header: rgb(11, 74, 152);
+$date-forecast-container-bg-color-from: rgba(45,101,154, 0.8);
+$date-forecast-container-bg-color-to: rgba(11,63,126,1);

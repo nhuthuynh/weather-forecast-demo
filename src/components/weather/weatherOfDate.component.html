@@ -1,0 +1,8 @@
+<div class="date-forecast-container">
+  <span class="weather-font weather-day">{{ vm.getFullDay(vm.ngModel['dt_txt']) || ' ' }}</span>
+  <span class="weather-font weather-date">{{ vm.getDate(vm.ngModel['dt_txt']) || ' ' }}</span>
+  <div class="weather-temp-container"><span class="weather-font weather-temp">{{ vm.ngModel['main']['temp'] | number: 0 }}</span><span class="weather-font weather-temp-unit">{{ '°' + vm.displayUnit }}</span></div>
+  <img class="weather-img hidden-xs" ng-src="{{ vm.getWeatherImage(vm.ngModel['weather'][0]['icon']) }}" title="{{vm.ngModel['weather'][0]['description'] || ' ' }}" />
+  <img class="weather-icon hidden-sm hidden-md hidden-lg" ng-src="{{vm.getWeatherIcon(vm.ngModel['weather'][0]['icon'])}}" title="{{ vm.ngModel['weather'][0]['description'] || ' '}}" />
+  <span class="weather-font weather-brief-desc">{{vm.ngModel['weather'][0]['description'] || ' ' }}</span>
+</div>
