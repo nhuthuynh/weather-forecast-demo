@@ -8,7 +8,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js",
+    "start": "./node_modules/webpack/bin/webpack.js --config ./webpack.config.prod.js -p --progress --profile --bail && node server.js",
     "build": "rimraf ./build && eslint *.js && webpack --config ./webpack.config.prod.js",
     "develop": "webpack-dev-server --config ./webpack.config.develop.js --open",
     "serve": "webpack --config ./webpack.config.prod.js -p --progress --profile --bail && http-server ./build -o",
