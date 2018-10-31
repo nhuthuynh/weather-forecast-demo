@@ -19,6 +19,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   plugins: [
+
     new NgAnnotatePlugin({
       add: true
     }),

@@ -46,6 +46,11 @@ module.exports = {
   },
 
   plugins: [
+    new CopyWebpackPlugin([{
+      from: 'src/images',
+      to: '/images'
+    }]),
+
     new FaviconsWebpackPlugin({
       logo: './components/bootstrap/images/favicon.png',
       emitStats: true,
@@ -75,13 +80,7 @@ module.exports = {
 
     new webpack.optimize.CommonsChunkPlugin({
       name: ['vendor'].reverse()
-    }),
-
-    new CopyWebpackPlugin([{
-      from: 'src/images',
-      to: 'build/images'
-    }])
-
+    })
   ]
 
 };

@@ -46,7 +46,7 @@ export default class WeatherController {
         this.location = {
           lat: response.lat,
           lon: response.lon,
-          city: `${response.city} ${response.region}, ${response.country}`
+          city: `${response.city}`
         };
       })
       .catch((error) => console.error(error));

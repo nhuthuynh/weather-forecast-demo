@@ -54,7 +54,7 @@ export default class WeatherService {
   getWeatherImageResource(icon) {
     let name = `${icon}.png`;
 
-    return `./build/images/${name}`;
+    return `images/${name}`;
   }
 
   getDate(date) {
