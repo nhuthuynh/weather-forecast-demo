@@ -12,8 +12,7 @@ module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
 
   output: {
-    path: path.join(__dirname, '/build'),
-    publicPath: path.join(__dirname, '/'),
+    path: path.join(__dirname, './build'),
     filename: '[name].[chunkhash].bundle.js',
     sourceMapFilename: '[name].[chunkhash].bundle.map',
     chunkFilename: '[id].[chunkhash].chunk.js'

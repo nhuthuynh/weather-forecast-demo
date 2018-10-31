@@ -4,7 +4,7 @@ const commonConfig = require('./webpack.config.common.js');
 
 module.exports = webpackMerge(commonConfig, {
   output: {
-    path: path.join(__dirname, '/build'),
+    path: path.join(__dirname, 'build'),
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',
@@ -15,7 +15,7 @@ module.exports = webpackMerge(commonConfig, {
   watch: true,
 
   devServer: {
-    contentBase: '/build', // npm install image-webpack-loader file-loader --save-dev /build
+    contentBase: './build',
     compress: true,
     port: 9000,
     host: 'localhost',

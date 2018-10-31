@@ -78,8 +78,8 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin([{
-      from: './src/images',
-      to: './build/images'
+      from: 'src/images',
+      to: 'build/images'
     }])
 
   ]
