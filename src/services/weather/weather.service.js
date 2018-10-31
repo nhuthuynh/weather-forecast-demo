@@ -41,9 +41,10 @@ export default class WeatherService {
   }
 
   getDay(date) {
-    let newDate = new Date(date);
+    let newDate = new Date(date),
+      today = new Date();
 
-    return newDate && newDate.getDay && this.weekDay[newDate.getDay()];
+    return newDate && newDate.getDay && newDate.getDay() === today.getDay() ? { full: 'Today', short: 'Today' } : this.weekDay[newDate.getDay()];
   }
 
   getWeatherIconUrl(icon) {
@@ -51,7 +52,9 @@ export default class WeatherService {
   }
 
   getWeatherImageResource(icon) {
-    return `build/images/${icon}.png`;
+    let name = `${icon}.png`;
+
+    return `./build/images/${name}`;
   }
 
   getDate(date) {

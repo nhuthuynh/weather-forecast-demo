@@ -39,8 +39,9 @@ module.exports = {
       test: /\.scss$/,
       loader: ['style-loader', 'css-loader', 'sass-loader']
     }, {
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      loader: ['file', 'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false']
+      test: /\.(jpg|png|svg)$/,
+      exclude: /node_modules/,
+      loader: ['file-loader']
     }]
   },
 

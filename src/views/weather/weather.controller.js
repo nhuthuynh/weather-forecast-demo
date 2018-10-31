@@ -35,7 +35,6 @@ export default class WeatherController {
       .then((response) => {
         this.weathers = this.WeatherService.groupWeatherByDates(response && response.list || []);
         this.displayUnit = this.unit;
-        console.info(this.weathers);
       })
       .catch((error) => console.error(error));
   }
@@ -44,7 +43,11 @@ export default class WeatherController {
     this.APIUtils.getCurrentLocation()
       .then((response) => {
         this.loadWeather(response.lat, response.lon, this.unit);
-        this.location = response;
+        this.location = {
+          lat: response.lat,
+          lon: response.lon,
+          city: `${response.city} ${response.region}, ${response.country}`
+        };
       })
       .catch((error) => console.error(error));
   }

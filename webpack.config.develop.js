@@ -16,7 +16,7 @@ module.exports = webpackMerge(commonConfig, {
   watch: true,
 
   devServer: {
-    contentBase: 'npm install image-webpack-loader file-loader --save-dev /build',
+    contentBase: '/build', // npm install image-webpack-loader file-loader --save-dev /build
     compress: true,
     port: 9000,
     host: 'localhost',
