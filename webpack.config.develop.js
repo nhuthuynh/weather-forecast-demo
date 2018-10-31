@@ -5,7 +5,6 @@ const commonConfig = require('./webpack.config.common.js');
 module.exports = webpackMerge(commonConfig, {
   output: {
     path: path.join(__dirname, '/build'),
-    publicPath: '/',
     filename: '[name].bundle.js',
     sourceMapFilename: '[name].map',
     chunkFilename: '[id].chunk.js',

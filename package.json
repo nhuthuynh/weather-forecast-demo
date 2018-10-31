@@ -14,7 +14,7 @@
     "serve": "webpack --config ./webpack.config.prod.js -p --progress --profile --bail && http-server ./build -o",
     "test:unit": "rimraf ./reports && karma start",
     "analyze": "webpack-bundle-analyzer ./build/stats.json",
-    "preinstall": "npm install webpack yarn webpack-dev-server",
+    "preinstall": "npm install webpack yarn webpack-dev-server express",
     "postinstall": "yarn run build"
   },
   "repository": {
