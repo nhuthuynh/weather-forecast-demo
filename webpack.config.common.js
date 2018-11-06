@@ -47,8 +47,8 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin([{
-      from: 'src/images',
-      to: '/images'
+      from: path.join(__dirname, 'src', 'images'),
+      to: path.join(__dirname, 'build', 'images')
     }]),
 
     new FaviconsWebpackPlugin({

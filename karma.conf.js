@@ -4,7 +4,6 @@ const shouldSingleRun = isProductionBuild;
 const browser = isProductionBuild ? 'PhantomJS' : 'Chrome';
 const webpackConfig = require('./webpack.config.common');
 
-// TODO issues with karma and CommonChunksPlugin
 // https://github.com/webpack/karma-webpack/issues/24
 webpackConfig.plugins[webpackConfig.plugins.length - 1] = function() {};
 
